@@ -5,9 +5,9 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfTest", "WpfTest\WpfTest.csproj", "{05A91404-FD90-4D6C-B404-6B262792A237}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{5610CF4C-6513-4E4E-B40A-E398A49329F6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{0E2C5BF4-865A-4D80-BD4E-F39578C4295D}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\OneDrive\Рабочий стол\README.md = ..\..\..\OneDrive\Рабочий стол\README.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
