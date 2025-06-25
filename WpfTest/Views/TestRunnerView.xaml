@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="WpfTest.Views.TestRunnerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:WpfTest.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:TestRunnerViewModel}"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="600">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding CurrentQuestion.Text}" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding CurrentQuestion.Answers}" 
+                 SelectedIndex="{Binding SelectedAnswerIndex, Mode=TwoWay}" />
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Назад" Command="{Binding PreviousCommand}" Margin="0,0,10,0"/>
+            <Button Content="Далее" Command="{Binding NextCommand}" Margin="0,0,10,0"/>
+            <Button Content="Завершить" Command="{Binding FinishCommand}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
